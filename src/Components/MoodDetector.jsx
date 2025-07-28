@@ -75,7 +75,15 @@ const MoodDetector = () => {
         </Link>
       </div>
       <h2 className="text-xl font-bold mb-4">Detect Your Mood</h2>
-      {loading ? <p>Loading models...</p> : null}
+      <div className="flex flex-col items-center justify-center mt-4">
+  {loading && (
+    <>
+      <div className="w-10 h-10 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
+      <p className="mt-2 text-white">Loading models...</p>
+    </>
+  )}
+</div>
+
       <video
         ref={videoRef}
         autoPlay
