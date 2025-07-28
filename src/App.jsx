@@ -7,6 +7,7 @@ import { Favourite } from "./Pages/Favourite";
 import { MoodPage } from "./Pages/MoodPage";
 import OfflineOverlay from "./Components/OfflineOverlay";
 import MoodDetector from "./Components/MoodDetector";
+import GoogleAnalytics from "./GoogleAnalytics";
 
 function App() {
   const [isOnline, setIsOnline] = useState(navigator.onLine);
@@ -25,6 +26,8 @@ function App() {
   }, []);
 
   return (
+    <>
+    <GoogleAnalytics/>
     <div className="min-h-screen bg-[#0f0f0f] text-white relative">
       <Navbar />
 
@@ -39,6 +42,7 @@ function App() {
         </Routes>
       )}
     </div>
+    </>
   );
 }
 
