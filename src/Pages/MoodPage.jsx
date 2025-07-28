@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { songsByMood } from "../data/Songs.js";
+import { songsByMood } from "../Data/Songs.js";
 import LiteYouTubeEmbed from "../Components/LiteYoutubeEmbed";
 import { useInView } from "react-intersection-observer";
 import { useFavorites } from "../context/FavoritesContext"; 
