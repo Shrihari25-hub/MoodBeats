@@ -1,12 +1,42 @@
-# React + Vite
+# MoodBeats – AI-Powered Music Recommendation Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MoodBeats is a web app that suggests songs based on your mood — detected in real-time using facial expressions via your webcam or chosen manually. Users can listen to songs, view mood-based playlists, and save their favorites — all in a clean, responsive UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+-  Detect mood in real-time using webcam + face-api.js
+-  Manual mood selection option (Happy, Sad, Angry, Neutral)
+-  Playlist of 48 handpicked songs categorized by mood
+-  Dynamic song cards with image, title, artist, and play button
+-  Favorite songs saved using `localStorage`
+-  Fully responsive design (mobile/tablet/desktop)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React.js
+- Tailwind CSS
+- face-api.js
+- Vite
+- YouTube Embed
+
+---
+
+## How It Works
+
+- The app uses `face-api.js` to detect expressions like "happy", "sad", "angry", and "neutral" from your live webcam feed.
+- Based on the detected mood, a relevant playlist is shown.
+- Users can also manually choose a mood if webcam access is denied.
+- Songs are rendered with thumbnails, titles, and play buttons using YouTube embed links.
+
+---
+
+## Getting Started (Run Locally)
+
+```bash
+git clone https://github.com/Shrihari25-hub/MoodBeats.git
+cd moodbeats
+npm install
+npm run dev
